@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="binaryCalculator" class="com.epam.labs.calculator.BinaryCalculator">
+        <constructor-arg ref="intBinaryOperation"/>
+    </bean>
+
+    <bean id="intBinaryOperation" class="com.epam.labs.calculator.operations.IntBinaryOperation">
+        <property name="firstValue" value="12"/>
+        <property name="secondValue" value="5"/>
+    </bean>
+
+    <bean id="doubleBinaryOperation" class="com.epam.labs.calculator.operations.DoubleBinaryOperation">
+        <property name="firstValue" value="5.2"/>
+        <property name="secondValue" value="2.6"/>
+    </bean>
+
+
+</beans>
